@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivid Solutions - Healthcare Strategy & Architecture Consulting</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3d6f 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4a90c2;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(44, 90, 160, 0.9), rgba(30, 61, 111, 0.9)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f8ff" width="1200" height="600"/><path fill="%234a90c2" opacity="0.1" d="M0,300 Q300,100 600,300 T1200,300 L1200,600 L0,600 Z"/></svg>');
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #b8d4f0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #4a90c2;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background: #357abd;
+            transform: translateY(-2px);
+        }
+
+        /* Mission Quote */
+        .mission-quote {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .quote-text {
+            font-size: 2rem;
+            font-style: italic;
+            color: #2c5aa0;
+            margin-bottom: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quote-author {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c5aa0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid #4a90c2;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #4a90c2, #2c5aa0);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .service-card h3 {
+            color: #2c5aa0;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* About Section */
+        .about {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 100px 0;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            color: #2c5aa0;
+            margin-bottom: 1rem;
+            font-size: 2.2rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4a90c2;
+        }
+
+        /* Team Section */
+        .team {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+            justify-items: center;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 2.5rem;
+            background: white;
+            border-radius: 15px;
+            transition: transform 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .member-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, #4a90c2, #2c5aa0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .member-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2c5aa0;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-role {
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Success Stories */
+        .success-stories {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3d6f 100%);
+            color: white;
+            padding: 100px 0;
+        }
+
+        .success-stories .section-title {
+            color: white;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .story-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .impact-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4a90c2;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Blog Section */
+        .blog {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-image {
+            height: 200px;
+            background: linear-gradient(135deg, #4a90c2, #2c5aa0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-title {
+            color: #2c5aa0;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #1e3d6f 0%, #2c5aa0 100%);
+            color: white;
+            padding: 100px 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1rem;
+        }
+
+        .contact-item {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-form {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.9);
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#home" class="logo">Vivid Solutions</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#blog">Insights</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Transforming Healthcare Through Innovation</h1>
+            <p class="subtitle">Expert healthcare strategy, solution architecture, and enterprise architecture consulting</p>
+            <a href="#contact" class="cta-button">Start Your Transformation</a>
+        </div>
+    </section>
+
+    <!-- Mission Quote -->
+    <section class="mission-quote">
+        <div class="container">
+            <p class="quote-text">"Start with the problem first, not the technology. True transformation comes from understanding the challenge before architecting the solution."</p>
+            <p class="quote-author">- Vamshi Chilukamarri, Vivid Solutions</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title fade-in">Architecture as a Service - Three Core Tenets</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔍</div>
+                    <h3>Business Use Case Discovery</h3>
+                    <p><strong>Strategy & Thought Leadership</strong><br><br>Partner with healthcare organizations, stakeholders, and consumers (both for-profit and non-profit) to discover and define business use cases. We provide expert strategic guidance to identify problems, understand requirements, and establish clear objectives before any technology consideration.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🗺️</div>
+                    <h3>Current to Future State Mapping</h3>
+                    <p><strong>Solution & Enterprise Architecture Blueprints</strong><br><br>Map your current state to transitional and future states through comprehensive architectural blueprints. We design the roadmap from where you are today to where you need to be, ensuring every step is strategically planned and technically sound.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Technology Build & Support</h3>
+                    <p><strong>Implementation & Operationalization</strong><br><br>Transition solution architecture to technology architecture blueprints. We guide how to build, implement, and operationalize solutions with ongoing support, ensuring your architectural vision becomes a working reality that delivers measurable outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h2>Architecture as a Service Philosophy</h2>
+                    <p><strong>Our Approach:</strong> We believe in starting with the problem first, not the technology. Every successful healthcare solution begins with understanding the business challenge, mapping the current reality to future possibilities, and then architecting the technical foundation to support that vision.</p>
+                    <p><strong>Mission:</strong> Delivering comprehensive architecture services that bridge business strategy and technology implementation, ensuring healthcare organizations have clear blueprints for transformation that enhance patient care and operational efficiency.</p>
+                    <p><strong>Partnership Commitment:</strong> We are your architectural partner, not a vendor. Our collaborative approach prioritizes your organization's best interests, providing unbiased recommendations and strategic guidance throughout your transformation journey.</p>
+                </div>
+                <div class="stats-grid fade-in">
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div>Years Combined Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">40%</div>
+                        <div>Avg. Efficiency Improvement</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">300K+</div>
+                        <div>Patients Impacted</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15%</div>
+                        <div>Avg. Cost Reduction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title fade-in">Leadership & Expertise</h2>
+            <div style="display: flex; justify-content: center; margin-top: 3rem;">
+                <div class="team-member fade-in" style="max-width: 500px;">
+                    <div class="member-photo">VC</div>
+                    <div class="member-name">Vamshi Chilukamarri</div>
+                    <div class="member-role">Founder & Principal Consultant</div>
+                    <p style="margin-top: 1.5rem; color: #666; text-align: left; line-height: 1.6;">Healthcare technology strategist with extensive experience in EHR interoperability, solution architecture, and enterprise integration. Deep expertise in FHIR, USCDI, TEFCA, and healthcare data standards. Proven track record of delivering transformational solutions that improve patient outcomes and operational efficiency.</p>
+                    <div style="margin-top: 1.5rem; text-align: left;">
+                        <h4 style="color: #2c5aa0; margin-bottom: 0.5rem;">Architecture Expertise:</h4>
+                        <ul style="color: #666; margin-left: 0; list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.3rem;">• Business Use Case Discovery & Strategy</li>
+                            <li style="margin-bottom: 0.3rem;">• Solution & Enterprise Architecture Blueprints</li>
+                            <li style="margin-bottom: 0.3rem;">• Technology Architecture & Implementation</li>
+                            <li style="margin-bottom: 0.3rem;">• Healthcare Data Standards (FHIR, USCDI, TEFCA)</li>
+                            <li style="margin-bottom: 0.3rem;">• EHR Integration & Interoperability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 4rem; text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 10px;" class="fade-in">
+                <h3 style="color: #2c5aa0; margin-bottom: 1rem;">Collaborative Architecture Approach</h3>
+                <p style="color: #666; max-width: 800px; margin: 0 auto;">I work with a curated network of healthcare technology specialists, clinical experts, and architecture professionals to ensure every engagement brings the right expertise to each phase - from business discovery through technology operationalization. This collaborative model delivers comprehensive architectural services while maintaining direct access to principal-level strategic guidance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="success-stories">
+        <div class="container">
+            <h2 class="section-title fade-in">Proven Results</h2>
+            <div class="stories-grid">
+                <div class="story-card fade-in">
+                    <div class="impact-number">40%</div>
+                    <h3>Provider Scheduling Efficiency</h3>
+                    <p>Connected and aggregated EHR appointment data to build insights dashboard highlighting provider scheduling rates by appointment type.</p>
+                </div>
+                <div class="story-card fade-in">
+                    <div class="impact-number">15%</div>
+                    <h3>Reduced No-Show Rates</h3>
+                    <p>Built appointment reminder solution across different EHRs to remind patients 4 days, 1 day, and 4 hours prior to appointments.</p>
+                </div>
+                <div class="story-card fade-in">
+                    <div class="impact-number">30%</div>
+                    <h3>Reduced Provider Burden</h3>
+                    <p>Enabled third-party care coordination app integration with EHRs using Smart on FHIR framework for point-of-care solutions.</p>
+                </div>
+                <div class="story-card fade-in">
+                    <div class="impact-number">15%</div>
+                    <h3>Reduced Readmission Rates</h3>
+                    <p>Built real-time integrations with Health Information Exchange for care coordination support post-ER discharges across 300K patients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title fade-in">Healthcare Insights & Thought Leadership</h2>
+            <div class="blog-grid">
+                <div class="blog-card fade-in">
+                    <div class="blog-image">Featured Article</div>
+                    <div class="blog-content">
+                        <div class="blog-date">Coming Soon</div>
+                        <h3 class="blog-title">The Future of EHR Interoperability: USCDI and FHIR Implementation</h3>
+                        <p>Exploring the latest developments in healthcare data standards and their impact on patient care delivery...</p>
+                    </div>
+                </div>
+                <div class="blog-card fade-in">
+                    <div class="blog-image">Industry Analysis</div>
+                    <div class="blog-content">
+                        <div class="blog-date">Coming Soon</div>
+                        <h3 class="blog-title">Revenue Cycle Optimization in the Digital Age</h3>
+                        <p>How healthcare organizations can leverage technology to streamline revenue cycle management...</p>
+                    </div>
+                </div>
+                <div class="blog-card fade-in">
+                    <div class="blog-image">Best Practices</div>
+                    <div class="blog-content">
+                        <div class="blog-date">Coming Soon</div>
+                        <h3 class="blog-title">Building Successful Healthcare Technology Partnerships</h3>
+                        <p>Key strategies for forming collaborative partnerships that drive innovation in healthcare...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Contact Us Today</h2>
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <div>
+                            <strong>Email:</strong><br>
+                            healthcare@solvivid.com
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <div>
+                            <strong>Phone:</strong><br>
+                            757-574-2413
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span>🌐</span>
+                        <div>
+                            <strong>Website:</strong><br>
+                            healthcare.solvivid.com
+                        </div>
+                    </div>
+                    <p style="margin-top: 2rem;">Ready to transform your healthcare organization through strategic architecture? Let's start with understanding your business challenges and architect the solution pathway that delivers measurable outcomes.</p>
+                </div>
+                <div class="contact-form fade-in">
+                    <h3>Send Us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Organization</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required placeholder="Tell us about your healthcare technology challenges..."></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Vivid Solutions. All rights reserved. | Transforming Healthcare Through Innovation</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
