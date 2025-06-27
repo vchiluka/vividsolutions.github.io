@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vivid Solutions - Healthcare Strategy & Architecture Consulting</title>
+    <title>Vivid Solutions - Building Healthcare Technology That Works</title>
     <style>
         * {
             margin: 0;
@@ -46,6 +46,8 @@
             font-weight: bold;
             color: white;
             text-decoration: none;
+            display: flex;
+            align-items: center;
         }
 
         .nav-links {
@@ -96,6 +98,8 @@
             font-weight: bold;
             transition: all 0.3s;
             margin-top: 1rem;
+            border: none;
+            cursor: pointer;
         }
 
         .cta-button:hover {
@@ -228,14 +232,6 @@
             background: white;
         }
 
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-            justify-items: center;
-        }
-
         .team-member {
             text-align: center;
             padding: 2.5rem;
@@ -243,8 +239,9 @@
             border-radius: 15px;
             transition: transform 0.3s;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            max-width: 400px;
+            max-width: 500px;
             width: 100%;
+            margin: 0 auto;
         }
 
         .team-member:hover {
@@ -367,52 +364,8 @@
             padding: 100px 0;
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .contact-info h3 {
-            margin-bottom: 1rem;
-        }
-
-        .contact-item {
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .contact-form {
-            background: rgba(255,255,255,0.1);
-            padding: 2rem;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-        }
-
-        .form-group {
-            margin-bottom: 1rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background: rgba(255,255,255,0.9);
-        }
-
-        .form-group textarea {
-            height: 100px;
-            resize: vertical;
+        .contact .section-title {
+            color: white;
         }
 
         /* Footer */
@@ -433,8 +386,7 @@
                 font-size: 2.5rem;
             }
 
-            .about-content,
-            .contact-grid {
+            .about-content {
                 grid-template-columns: 1fr;
             }
 
@@ -488,9 +440,9 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
-            <h1>Transforming Healthcare Through Innovation</h1>
-            <p class="subtitle">Expert healthcare strategy, solution architecture, and enterprise architecture consulting</p>
-            <a href="#contact" class="cta-button">Start Your Transformation</a>
+            <h1>Building Healthcare Technology That Works</h1>
+            <p class="subtitle">Strategic CIO/CTO leadership that thinks enterprise-first, not project-first. Get the architectural mindset your healthcare organization needs without the C-suite overhead.</p>
+            <a href="#contact" class="cta-button">Discover Architecture as a Service</a>
         </div>
     </section>
 
@@ -671,14 +623,6 @@
                         <div class="stat-number">Fractional</div>
                         <div>Cost Investment</div>
                     </div>
-                </div>    <div class="stat-item">
-                        <div class="stat-number">15+</div>
-                        <div>Years Healthcare Technology</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">24/7</div>
-                        <div>Available When You Need</div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -689,7 +633,7 @@
         <div class="container">
             <h2 class="section-title fade-in">Leadership & Expertise</h2>
             <div style="display: flex; justify-content: center; margin-top: 3rem;">
-                <div class="team-member fade-in" style="max-width: 500px;">
+                <div class="team-member fade-in">
                     <div class="member-photo">VC</div>
                     <div class="member-name">Vamshi Chilukamarri</div>
                     <div class="member-role">Founder & Principal Consultant</div>
@@ -780,38 +724,57 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title fade-in">Contact Us Today</h2>
-                <div class="contact-info fade-in">
-                    <h3>Get in Touch</h3>
-                    <div class="contact-item">
-                        <span>📧</span>
-                        <div>
-                            <strong>Email:</strong><br>
-                            healthcare@solvivid.com
-                        </div>
+            <p class="fade-in" style="text-align: center; max-width: 600px; margin: 0 auto 3rem; color: #b8d4f0; font-size: 1.1rem;">Ready to transform your healthcare delivery through strategic architecture? Let's start by understanding your healthcare technology challenges.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;" class="fade-in">
+                <div style="text-align: center; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 15px; backdrop-filter: blur(10px);">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #4a90c2, #2c5aa0); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem;">📧</div>
+                    <h3 style="color: white; margin-bottom: 0.5rem; font-size: 1.3rem;">Email</h3>
+                    <p style="color: #4a90c2; font-size: 1.1rem; font-weight: bold; margin-bottom: 1rem;">healthcare@solvivid.com</p>
+                    <p style="color: #b8d4f0; font-size: 0.95rem; margin: 0;">Discuss your healthcare architecture challenges and strategic technology needs</p>
+                </div>
+                
+                <div style="text-align: center; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 15px; backdrop-filter: blur(10px);">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #4a90c2, #2c5aa0); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem;">📞</div>
+                    <h3 style="color: white; margin-bottom: 0.5rem; font-size: 1.3rem;">Phone</h3>
+                    <p style="color: #4a90c2; font-size: 1.1rem; font-weight: bold; margin-bottom: 1rem;">757-574-2413</p>
+                    <p style="color: #b8d4f0; font-size: 0.95rem; margin: 0;">Schedule a consultation to explore Architecture as a Service for your organization</p>
+                </div>
+                
+                <div style="text-align: center; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 15px; backdrop-filter: blur(10px);">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #4a90c2, #2c5aa0); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem;">🌐</div>
+                    <h3 style="color: white; margin-bottom: 0.5rem; font-size: 1.3rem;">Website</h3>
+                    <p style="color: #4a90c2; font-size: 1.1rem; font-weight: bold; margin-bottom: 1rem;">healthcare.solvivid.com</p>
+                    <p style="color: #b8d4f0; font-size: 0.95rem; margin: 0;">Learn more about our healthcare technology architecture expertise and case studies</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 4rem; padding: 2.5rem; background: rgba(255,255,255,0.05); border-radius: 15px;" class="fade-in">
+                <h3 style="color: white; margin-bottom: 1rem; font-size: 1.5rem;">Ready to Get Started?</h3>
+                <p style="color: #b8d4f0; max-width: 700px; margin: 0 auto 2rem; font-size: 1rem; line-height: 1.6;">Whether you need strategic healthcare delivery assessment, technology infrastructure planning, interoperability roadmaps, or enterprise transformation - I bring Architecture as a Service thinking to your healthcare organization's unique challenges.</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                    <div style="padding: 1.5rem; background: rgba(74, 144, 194, 0.1); border-radius: 10px; border-left: 4px solid #4a90c2;">
+                        <h4 style="color: #4a90c2; margin-bottom: 0.5rem;">🎯 Strategic Consultation</h4>
+                        <p style="color: #b8d4f0; margin: 0; font-size: 0.9rem;">One-time strategic assessment and roadmap development for specific healthcare technology challenges</p>
                     </div>
-                    <div class="contact-item">
-                        <span>📞</span>
-                        <div>
-                            <strong>Phone:</strong><br>
-                            757-574-2413
-                        </div>
+                    <div style="padding: 1.5rem; background: rgba(40, 167, 69, 0.1); border-radius: 10px; border-left: 4px solid #28a745;">
+                        <h4 style="color: #28a745; margin-bottom: 0.5rem;">🏗️ Project-Based Architecture</h4>
+                        <p style="color: #b8d4f0; margin: 0; font-size: 0.9rem;">Comprehensive architecture design and implementation guidance for major healthcare technology initiatives</p>
                     </div>
-                    <div class="contact-item">
-                        <span>🌐</span>
-                        <div>
-                            <strong>Website:</strong><br>
-                            healthcare.solvivid.com
-                        </div>
+                    <div style="padding: 1.5rem; background: rgba(253, 126, 20, 0.1); border-radius: 10px; border-left: 4px solid #fd7e14;">
+                        <h4 style="color: #fd7e14; margin-bottom: 0.5rem;">⚡ Ongoing Advisory</h4>
+                        <p style="color: #b8d4f0; margin: 0; font-size: 0.9rem;">Fractional CIO/CTO services for continuous healthcare architecture leadership and strategic guidance</p>
                     </div>
                 </div>
-                    <p style="margin-top: 2rem;">Ready to transform your healthcare delivery through strategic architecture? Let's start by understanding your healthcare technology challenges and architecting enterprise solutions that enhance patient care, reduce technical debt, and optimize your technology infrastructure.</p>
             </div>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Vivid Solutions. All rights reserved. | Transforming Healthcare Through Innovation</p>
+            <p>&copy; 2025 Vivid Solutions. All rights reserved. | Building Healthcare Technology That Works</p>
         </div>
     </footer>
 
@@ -842,13 +805,6 @@
 
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
-        });
-
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you within 24 hours.');
-            this.reset();
         });
     </script>
 </body>
