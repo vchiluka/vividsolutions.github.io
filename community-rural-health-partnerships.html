@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GLBNDNZNG1"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'G-GLBNDNZNG1');
+   </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community & Rural Hospital Partnerships - Vivid Solutions</title>
+    <meta name="description" content="How Vivid Solutions partners with community and rural health hospitals to deliver meaningful, impactful care to communities facing unmet needs and severe healthcare access barriers.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3d6f 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4a90c2;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(44, 90, 160, 0.9), rgba(30, 61, 111, 0.9)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f8ff" width="1200" height="600"/><path fill="%234a90c2" opacity="0.1" d="M0,300 Q300,100 600,300 T1200,300 L1200,600 L0,600 Z"/></svg>');
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #b8d4f0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #4a90c2;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            margin-top: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #357abd;
+            transform: translateY(-2px);
+        }
+
+        /* Mission Quote */
+        .mission-quote {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .quote-text {
+            font-size: 1.8rem;
+            font-style: italic;
+            color: #2c5aa0;
+            margin-bottom: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quote-author {
+            color: #666;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        /* Generic Section */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c5aa0;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .white-section {
+            background: white;
+        }
+
+        .gray-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid #4a90c2;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #4a90c2, #2c5aa0);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .card h3 {
+            color: #2c5aa0;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+        /* Numbered process steps */
+        .process-steps {
+            max-width: 900px;
+            margin: 3rem auto 0;
+        }
+
+        .process-step {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4a90c2, #2c5aa0);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .step-content h3 {
+            color: #2c5aa0;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content p {
+            color: #666;
+        }
+
+        /* Dark section (impact areas) */
+        .dark-section {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3d6f 100%);
+            color: white;
+        }
+
+        .dark-section .section-title,
+        .dark-section .section-subtitle {
+            color: white;
+        }
+
+        .dark-section .section-subtitle {
+            color: #b8d4f0;
+        }
+
+        .impact-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .impact-card h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .impact-card p {
+            color: #b8d4f0;
+            margin: 0;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #1e3d6f 0%, #2c5aa0 100%);
+            color: white;
+        }
+
+        .contact .section-title,
+        .contact .section-subtitle {
+            color: white;
+        }
+
+        .contact .section-subtitle {
+            color: #b8d4f0;
+        }
+
+        .contact-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #4a90c2, #2c5aa0);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        footer a {
+            color: #4a90c2;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .process-step {
+                flex-direction: column;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <svg width="45" height="45" viewBox="0 0 100 100" style="margin-right: 10px;">
+                    <circle cx="50" cy="50" r="45" fill="white" stroke="#2c5aa0" stroke-width="2"/>
+                    <circle cx="50" cy="50" r="35" fill="none" stroke="#2c5aa0" stroke-width="8"/>
+                    <circle cx="50" cy="50" r="20" fill="white" stroke="#2c5aa0" stroke-width="2"/>
+                    <line x1="50" y1="40" x2="50" y2="60" stroke="#2c5aa0" stroke-width="3"/>
+                    <line x1="40" y1="50" x2="60" y2="50" stroke="#2c5aa0" stroke-width="3"/>
+                </svg>
+                Vivid Solutions
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#why">Why It Matters</a></li>
+                <li><a href="#model">Partnership Model</a></li>
+                <li><a href="#impact">Impact Areas</a></li>
+                <li><a href="#engagement">How We Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Community & Rural Hospital Partnerships</h1>
+            <p class="subtitle">Standing alongside the hospitals that are often the only source of care for their communities &mdash; helping them deliver meaningful, impactful care to patients facing unmet needs and severe healthcare access barriers.</p>
+            <a href="#contact" class="cta-button">Start a Partnership Conversation</a>
+        </div>
+    </section>
+
+    <!-- Mission Quote -->
+    <section class="mission-quote">
+        <div class="container">
+            <p class="quote-text">"The hospitals serving the most underserved communities are too often left with the least support. Real impact starts with standing beside them, not just studying them."</p>
+            <p class="quote-author">- Vivid Solutions, Architecture as a Service</p>
+        </div>
+    </section>
+
+    <!-- Why It Matters -->
+    <section id="why" class="white-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Why Community & Rural Hospitals Need a Different Kind of Partner</h2>
+            <p class="section-subtitle fade-in">Community and rural health hospitals are frequently the last line of defense for patients who have nowhere else to turn. They also face some of the steepest structural barriers in healthcare.</p>
+            <div class="card-grid">
+                <div class="card fade-in">
+                    <div class="card-icon">🚑</div>
+                    <h3>Distance & Transportation</h3>
+                    <p>Patients often travel long distances for specialty care, and missed appointments or delayed treatment are common consequences of limited local access.</p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-icon">👩‍⚕️</div>
+                    <h3>Workforce Shortages</h3>
+                    <p>Recruiting and retaining physicians, specialists, and clinical staff is an ongoing struggle for hospitals serving smaller, geographically dispersed populations.</p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-icon">💻</div>
+                    <h3>Technology & Interoperability Gaps</h3>
+                    <p>Legacy systems and disconnected data make it difficult to coordinate care, refer patients to outside specialists, or participate in modern value-based care models.</p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-icon">💰</div>
+                    <h3>Financial Fragility</h3>
+                    <p>Thin operating margins leave little room for the technology investment needed to modernize care delivery, even when that investment would reduce long-term cost.</p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-icon">🧠</div>
+                    <h3>Behavioral & Chronic Care Gaps</h3>
+                    <p>Behavioral health, maternal health, and chronic disease management services are frequently unavailable locally, forcing patients to go without or go far.</p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-icon">📋</div>
+                    <h3>Regulatory & Compliance Burden</h3>
+                    <p>Smaller hospitals must meet the same regulatory and interoperability requirements as large health systems, often without the dedicated staff to manage them.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Model -->
+    <section id="model" class="gray-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Our Partnership Model</h2>
+            <p class="section-subtitle fade-in">We partner with community and rural hospitals as an extension of their leadership team &mdash; bringing enterprise-level architecture thinking to organizations that rarely have access to it.</p>
+            <div class="card-grid">
+                <div class="card fade-in">
+                    <div class="card-icon">🎯</div>
+                    <h3>Strategic Alignment</h3>
+                    <p>We start by understanding the community's specific health needs and the hospital's operational realities, aligning any technology investment to real patient outcomes rather than generic best practices.</p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-icon">🔗</div>
+                    <h3>Interoperability & Care Coordination</h3>
+                    <p>We help hospitals connect with regional health systems, specialists, and health information exchanges &mdash; using FHIR, HL7, and USCDI standards &mdash; so patients aren't lost between referrals.</p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-icon">📡</div>
+                    <h3>Telehealth & Specialist Access Enablement</h3>
+                    <p>We design technology pathways that extend the reach of scarce specialists to patients who otherwise couldn't reach them, reducing travel burden and closing access gaps.</p>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-icon">🛠️</div>
+                    <h3>Right-Sized Modernization</h3>
+                    <p>We prioritize sustainable, right-sized technology investments that fit a rural or community hospital's budget and staffing reality &mdash; not enterprise solutions built for systems ten times their size.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Areas -->
+    <section id="impact" class="dark-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Where Partnership Creates Impact</h2>
+            <p class="section-subtitle fade-in">The goal of every partnership is the same: care that reaches the patients who need it most, when they need it.</p>
+            <div class="card-grid">
+                <div class="impact-card fade-in">
+                    <h3>Post-Discharge Care Coordination</h3>
+                    <p>Reducing avoidable readmissions by keeping patients connected to follow-up care after they leave the hospital.</p>
+                </div>
+                <div class="impact-card fade-in">
+                    <h3>Chronic Disease Management</h3>
+                    <p>Supporting ongoing monitoring and management for diabetes, heart disease, and other chronic conditions common in underserved communities.</p>
+                </div>
+                <div class="impact-card fade-in">
+                    <h3>Maternal & Behavioral Health Access</h3>
+                    <p>Helping hospitals extend maternal and behavioral health services to communities where these services have historically been unavailable.</p>
+                </div>
+                <div class="impact-card fade-in">
+                    <h3>Emergency & Specialist Referral Pathways</h3>
+                    <p>Building reliable, technology-enabled referral pathways so emergency and specialty care reach patients faster.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work Together -->
+    <section id="engagement" class="white-section">
+        <div class="container">
+            <h2 class="section-title fade-in">How We Work Together</h2>
+            <p class="section-subtitle fade-in">Every partnership is built around the hospital's own community, timeline, and resources.</p>
+            <div class="process-steps">
+                <div class="process-step fade-in">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Listen & Assess</h3>
+                        <p>We start on the ground with hospital leadership and care teams to understand the community's unmet needs and the barriers standing in the way of care.</p>
+                    </div>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Co-Design the Approach</h3>
+                        <p>We design a technology and care-coordination roadmap in partnership with the hospital, not for it &mdash; ensuring the plan fits local realities and staff capacity.</p>
+                    </div>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Implement in Phases</h3>
+                        <p>We roll out changes in manageable phases, so the hospital can absorb each improvement without disrupting day-to-day patient care.</p>
+                    </div>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Support for the Long Term</h3>
+                        <p>Our involvement doesn't end at go-live. We stay engaged as a long-term architecture partner, so the hospital always has strategic support on hand.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Let's Talk About Your Community</h2>
+            <p class="section-subtitle fade-in">If you lead or support a community or rural health hospital and want a partner who understands your constraints as well as your mission, we'd like to hear from you.</p>
+            <div class="card-grid fade-in">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3 style="color: white; margin-bottom: 0.5rem; font-size: 1.3rem;">Email</h3>
+                    <p style="color: #4a90c2; font-size: 1.1rem; font-weight: bold; margin-bottom: 1rem;">healthcare@solvivid.com</p>
+                    <p style="color: #b8d4f0; font-size: 0.95rem; margin: 0;">Tell us about your community's needs and the access barriers your hospital is working to solve.</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">🌐</div>
+                    <h3 style="color: white; margin-bottom: 0.5rem; font-size: 1.3rem;">Website</h3>
+                    <p style="color: #4a90c2; font-size: 1.1rem; font-weight: bold; margin-bottom: 1rem;">www.solvivid.com</p>
+                    <p style="color: #b8d4f0; font-size: 0.95rem; margin: 0;">Learn more about our healthcare technology architecture expertise and approach.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Vivid Solutions. All rights reserved. | <a href="index.html">Back to Home</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for in-page navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
